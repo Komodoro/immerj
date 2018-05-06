@@ -116,7 +116,7 @@
                 <div class=" links">
             
                     @auth
-                        <a class="{{ Request::is('connect') ? 'active' : '' }}" href="{{ url('/home') }}">About</a>
+                        <a class="{{ Request::is('connect') ? 'active' : '' }}" href="{{ url('/about') }}">About</a>
                         
                     @else
                         <a class="{{ Request::is('connect') ? 'active' : '' }}" href="{{ route('login') }}">Login</a>
