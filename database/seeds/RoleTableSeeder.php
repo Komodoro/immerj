@@ -23,8 +23,8 @@ class RoleTableSeeder extends Seeder
         $role_migrant->save();
 
         $role_refugee = new Role();
-        $role_refugee->name = 'refugee';
-        $role_refugee->description = 'A Refugee User';
+        $role_refugee->name = 'volunteer';
+        $role_refugee->description = 'A Volunteer User';
         $role_refugee->save();
     }
 }
