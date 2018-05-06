@@ -86,7 +86,7 @@
                     </ul>
                     <div class=" links">
                     <a href="{{ url('/home') }}">Home</a>
-                    <a href="{{ url('/home') }}">Profiles</a>
+                    <a href="{{ url('/profile') }}">Profiles</a>
                     <a class="navbar-brand nav nav-justified" href="{{ url('/') }}">
                     Connect
                     </a> 

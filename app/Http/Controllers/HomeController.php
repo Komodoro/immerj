@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -25,6 +26,13 @@ class HomeController extends Controller
     {
         $request->user()->authorizeRoles(['admin','migrant','volunteer']);
         return view('home');
+    }
+
+    public function profile(Request $request){
+        $users = User::all();
+
+        //return $users;//view('profile',$users);
+        return view('profile',$users);
     }
 
     /*
