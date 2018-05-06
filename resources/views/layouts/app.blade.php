@@ -41,11 +41,11 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto" style="padding: 0%;border: 0%;">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="{{ Request::is('login') ? 'active' : '' }}"
-                                ><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <li class="{{ Request::is('login') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             <li class="{{ Request::is('register') ? 'active' : '' }}">
                                 <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
