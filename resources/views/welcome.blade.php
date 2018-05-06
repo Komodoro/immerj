@@ -102,12 +102,14 @@
             <a class="navbar-brand nav nav-justified" href="{{ url('/') }}">
                     Helping Others
             </a>
+
+            <a class="navbar-brand nav nav-justified" href="{{ url('/about') }}">About</a>
         </div>
         @if (Route::has('login'))
                 <div class=" links">
             </a>
                     @auth
-                        <a href="{{ url('/home') }}">About</a>
+                        <a href="{{ url('/home') }}">Home</a>
                         
                     @else
                         <a href="{{ route('login') }}">Login</a>
