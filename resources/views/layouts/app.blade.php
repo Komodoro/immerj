@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ asset('image/IMMERJ_LOGO_NAVBAR.png', 'IMMERJ LOGO') }}
+                    <img src="{{ asset('image/IMMERJ_LOGO_NAVBAR.png') }}" alt="IMMERJ LOGO" width="125" height="35">
                     <!--<img src="{{ config('app.img') }}" alt="IMMERJ LOGO" width="125" height="35"></>-->
                     <!--{{ config('app.name', 'IMMERJ') }}-->
                 </a>
