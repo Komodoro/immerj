@@ -22,7 +22,15 @@ class RegisterController extends Controller
     |
     */
 
-    use RegistersUsers;
+    //use RegistersUsers;
+
+    public function showRegistrationForm()
+    {
+        $roles = Role::where('name','volunteer')
+                       ->orWhere('name','migrant')->get();
+        //dd($roles);
+        return view('auth.register', compact('roles'));
+    }
 
     /**
      * Where to redirect users after registration.
