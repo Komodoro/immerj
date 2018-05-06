@@ -23,7 +23,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel"  style="padding: 0%; border: 0%;">
             <div class="container">
                 <a class="navbar-brand nav nav-justified" href="{{ url('/') }}">
                     <img src="{{ asset('image/IMMERJ_LOGO_NAVBAR.png') }}" alt="IMMERJ LOGO" width="125" height="35">
@@ -41,7 +41,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto" style="padding: 0%;border: 0%;">
+                    <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
                             <li class="{{ Request::is('login') ? 'active' : '' }}">
