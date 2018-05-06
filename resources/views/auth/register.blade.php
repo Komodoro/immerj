@@ -30,11 +30,11 @@
 
                             
                                 <label class="col-2 custom-control custom-radio">
-                                    <input id="gender" type="radio" class="form-control" name="gender" required autofocus>
+                                    <input class="form-check-input" type="radio" name="blankRadio" id="blankRadio1" value="Male" aria-label="...">
                                     <span class="custom-control-description">Male</span>
                                 </label>
                                 <label class="col-2 custom-control custom-radio">
-                                    <input class="form-check-input" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                    <input class="form-check-input" type="radio" name="blankRadio" id="blankRadio1" value="Female" aria-label="...">
 	                                <span class="custom-control-description">Female</span>
                                 </label>
                                 @if ($errors->has('gender'))
@@ -93,6 +93,15 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="role" class="col-md-4 col-form-label text-md-right">Birth date</label>
+                            <div class="col-md-6">
+                                <input id="date" class="form-control" type="date" name="datebirth">
+                            </div>
+                        </div>
+
+
+                        
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
