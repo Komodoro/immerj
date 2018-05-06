@@ -26,6 +26,26 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
+
+                            
+                                <label class="col-2 custom-control custom-radio">
+                                    <input id="gender" type="radio" class="form-control" name="gender" required autofocus>
+                                    <span class="custom-control-description">Male</span>
+                                </label>
+                                <label class="col-2 custom-control custom-radio">
+                                    <input class="form-check-input" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+	                                <span class="custom-control-description">Female</span>
+                                </label>
+                                @if ($errors->has('gender'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('gender') }}</strong>
+                                    </span>
+                                @endif
+                            
+                        </div>
+
+                        <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
