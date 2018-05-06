@@ -94,7 +94,7 @@
 
                     </ul>
                     <div class=" links">
-                    <a class="{{ Request::is('home') ? 'home' : '' }}" href="{{ url('/home') }}">Home</a>
+                    <!--<a class="{{ Request::is('home') ? 'home' : '' }}" href="{{ url('/home') }}">Home</a>-->
                     <a class="{{ Request::is('profile') ? 'active' : '' }}" href="{{ url('/profile') }}">Profiles</a>
                     <a class="{{ Request::is('connect') ? 'active' : '' }}" href="{{ url('/') }}">
                     Connect
@@ -111,12 +111,15 @@
             <a class="{{ Request::is('connect') ? 'active' : '' }}" href="{{ url('/') }}">
                     Helping Others
             </a>
+
+            <a class="{{ Request::is('connect') ? 'active' : '' }}" href="{{ url('/about') }}">About</a>
         </div>
+            
         @if (Route::has('login'))
                 <div class=" links">
             
                     @auth
-                        <a class="{{ Request::is('connect') ? 'active' : '' }}" href="{{ url('/about') }}">About</a>
+                        <a class="{{ Request::is('connect') ? 'active' : '' }}" href="{{ url('/home') }}">Home</a>           
                         
                     @else
                         <a class="{{ Request::is('connect') ? 'active' : '' }}" href="{{ route('login') }}">Login</a>
