@@ -32,14 +32,14 @@
                 margin: 5;
             }
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
+            .menu-immerj {
+                color: #636b6f;
+                padding: 0 35px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
             }
 
             .position-ref {
@@ -96,19 +96,19 @@
                     <div class=" links">
                     <a class="{{ Request::is('home') ? 'home' : '' }}" href="{{ url('/home') }}">Home</a>
                     <a class="{{ Request::is('profile') ? 'active' : '' }}" href="{{ url('/profile') }}">Profiles</a>
-                    <a class="{{ Request::is('connect') ? 'active' : '' }} navbar-brand nav nav-justified" href="{{ url('/') }}">
+                    <a class="{{ Request::is('connect') ? 'active' : '' }}" href="{{ url('/') }}">
                     Connect
                     </a> 
         </div>   
                  <!--   <div class="flex-center position-ref full-height">-->
            
             <div class=" links">
-                <a class="{{ Request::is('connect') ? 'active' : '' }} navbar-brand nav nav-justified" href="{{ url('/') }}">
+                <a class="{{ Request::is('connect') ? 'active' : '' }}" href="{{ url('/') }}">
                         <img src="{{ asset('image/IMMERJ_LOGO_NAVBAR.png') }}" alt="IMMERJ LOGO" width="125" height="35">
                 </a>
 
             
-            <a class="{{ Request::is('connect') ? 'active' : '' }} navbar-brand nav nav-justified" href="{{ url('/') }}">
+            <a class="{{ Request::is('connect') ? 'active' : '' }}" href="{{ url('/') }}">
                     Helping Others
             </a>
         </div>
@@ -132,24 +132,20 @@
                         @auth
                         
                         <div class=" links">
-                        <a class="{{ Request::is('connect') ? 'active' : '' }}" href="{{ url('/home') }}" role="button"   v-pre>
-        </div>
-                                    {{ Auth::user()->name }}
-                                </a>
-                        <!--<li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        
+                        <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="dropdown-toggle menu-immerj" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     
                                 
-                                <!--<a href="{{ url('/home') }}">Home</a>-->
-                                
-                                <!--<a class="dropdown-item" href="{{ url('/home') }}">
-                                        {{ url('/home') }}
-                                </a>-->
-                                <!--<a class="dropdown-item" href="{{ route('logout') }}"
+                               
+                                <a class="dropdown-item" href="{{ url('/home') }}">
+                                        Home
+                                </a>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -159,15 +155,15 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>-->
+                            </li>
         </div>
                     @else
-                   <!-- <li class="{{ Request::is('login') ? 'active' : '' }}">
+                    <li class="{{ Request::is('login') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
                     <li class="{{ Request::is('register') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                    </li>-->
+                    </li>
                     @endauth
                        
                     </ul>
