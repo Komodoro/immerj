@@ -185,6 +185,8 @@
 
             
 
+            <br>
+
             <form method="POST" action="">
                         @csrf
                 <div class="form-group row center">
