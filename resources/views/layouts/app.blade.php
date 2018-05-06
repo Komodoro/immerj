@@ -25,7 +25,9 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'IMMERJ') }}
+                    {{ asset('image/IMMERJ_LOGO_NAVBAR.png', 'IMMERJ LOGO') }}
+                    <!--<img src="{{ config('app.img') }}" alt="IMMERJ LOGO" width="125" height="35"></>-->
+                    <!--{{ config('app.name', 'IMMERJ') }}-->
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
