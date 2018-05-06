@@ -61,12 +61,12 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-            'gender' => 'required|string',
+            'gender' => 'required',
             'birth' => 'required',
             'phone' => 'required',
-            'address' => 'required|string',
-            'country' => 'required|string',
-            'lang' => 'required|string'
+            'address' => 'required',
+            'country' => 'required',
+            'lang' => 'required'
         ]);
     }
 
@@ -87,7 +87,7 @@ class RegisterController extends Controller
             'phone' => $data['phone'],
             'address' => $data['address'],
             'country' => $data['country'],
-            'lang' => $data['lang']
+            'lang' => $data['lang'],
         ]);
 
         $user->roles()->attach($data['role']);

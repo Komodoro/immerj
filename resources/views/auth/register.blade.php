@@ -30,11 +30,11 @@
 
                             
                             <label class="col-2 custom-control custom-radio form-check-inline">
-                                <input class="form-check-input" type="radio" name="blankRadio" id="male" value="Male" aria-label="...">
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="Male" aria-label="...">
                                 <span class="custom-control-description">Male</span>
                             </label>
                             <label class="col-2 custom-control custom-radio form-check-inline">
-                                <input class="form-check-input" type="radio" name="blankRadio" id="female" value="Female" aria-label="...">
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="Female" aria-label="...">
                                 <span class="custom-control-description">Female</span>
                             </label>
                             @if ($errors->has('gender'))
@@ -93,10 +93,16 @@
                                 </select>
                             </div>
                         </div>
+
                         <div class="form-group row">
-                            <label for="role" class="col-md-4 col-form-label text-md-right">Birth date</label>
+                            <label for="birth" class="col-md-4 col-form-label text-md-right">Birth date</label>
                             <div class="col-md-6">
                                 <input id="date" class="form-control" type="date" name="birth">
+                                @if ($errors->has('birth'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('birth') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 
