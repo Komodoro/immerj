@@ -29,19 +29,19 @@
                             <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
 
                             
-                                <label class="col-2 custom-control custom-radio">
-                                    <input class="form-check-input" type="radio" name="blankRadio" id="blankRadio1" value="Male" aria-label="...">
-                                    <span class="custom-control-description">Male</span>
-                                </label>
-                                <label class="col-2 custom-control custom-radio">
-                                    <input class="form-check-input" type="radio" name="blankRadio" id="blankRadio1" value="Female" aria-label="...">
-	                                <span class="custom-control-description">Female</span>
-                                </label>
-                                @if ($errors->has('gender'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('gender') }}</strong>
-                                    </span>
-                                @endif
+                            <label class="col-2 custom-control custom-radio form-check-inline">
+                                <input class="form-check-input" type="radio" name="blankRadio" id="male" value="Male" aria-label="...">
+                                <span class="custom-control-description">Male</span>
+                            </label>
+                            <label class="col-2 custom-control custom-radio form-check-inline">
+                                <input class="form-check-input" type="radio" name="blankRadio" id="female" value="Female" aria-label="...">
+                                <span class="custom-control-description">Female</span>
+                            </label>
+                            @if ($errors->has('gender'))
+                                <span class="invalid-feedback">
+                                    <strong>{{ $errors->first('gender') }}</strong>
+                                </span>
+                            @endif
                             
                         </div>
 
@@ -100,7 +100,61 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label>
 
+                            <div class="col-md-6">
+                                <input id="phone" type="number" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" name="phone" value="{{ old('phone') }}" required>
+
+                                @if ($errors->has('phone'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="address" type="text" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" value="{{ old('address') }}" required>
+
+                                @if ($errors->has('address'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('address') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="country" type="text" class="form-control{{ $errors->has('country') ? ' is-invalid' : '' }}" name="country" value="{{ old('country') }}" required>
+
+                                @if ($errors->has('country'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('country') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="lang" class="col-md-4 col-form-label text-md-right">{{ __('Spoken Language') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="lang" type="text" class="form-control{{ $errors->has('lang') ? ' is-invalid' : '' }}" name="lang" value="{{ old('lang') }}" required>
+
+                                @if ($errors->has('lang'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('lang') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
                         
 
                         <div class="form-group row mb-0">
