@@ -22,7 +22,7 @@ class RegisterController extends Controller
     |
     */
 
-    //use RegistersUsers;
+    use RegistersUsers;
 
     public function showRegistrationForm()
     {
@@ -76,9 +76,10 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            //'role' => $data['role'],
         ]);
 
-        //$user->roles()->attach(Role::where('name','admin')->first());
+        $user->roles()->attach($data['role']);
 
         return $user;
 
